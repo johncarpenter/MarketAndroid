@@ -1,0 +1,66 @@
+<!--
+  ~ Copyright (c) 2015. 2Lines Software,Inc
+  ~
+  ~   Licensed under the Apache License, Version 2.0 (the "License");
+  ~   you may not use this file except in compliance with the License.
+  ~   You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~   Unless required by applicable law or agreed to in writing, software
+  ~   distributed under the License is distributed on an "AS IS" BASIS,
+  ~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~   See the License for the specific language governing permissions and
+  ~   limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/content_margins"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/pal_grey_1">
+
+
+            <TextView
+                android:id="@+id/text_info_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_margins_half"
+                android:layout_marginLeft="@dimen/content_margins"
+                android:layout_marginBottom="@dimen/content_margins_half"
+                style="@style/SmarterList.TextStyle.Caption"
+                android:text="@string/dialog_select_title_caption"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SmarterList.CaptionBar"
+        android:text="@string/dialog_select_avaiable"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_master"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>

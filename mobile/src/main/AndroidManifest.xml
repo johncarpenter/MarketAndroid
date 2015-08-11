@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.twolinessoftware.smarterlist" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   
+    <!--uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /-->
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.twolinessoftware.smarterlist.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.twolinessoftware.smarterlist.gcm.permission.C2D_MESSAGE" />
+
+
+    <application
+        android:name=".SmarterListApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/SmarterList.App" >
+
+        <activity
+            android:name=".activity.MainNavigationActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"
+            android:taskAffinity="com.twolinessoftware.smarterlist">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+                <data
+                    android:scheme="https"
+                    android:host="api.smarterlistapp.com"
+                    android:pathPrefix="/api/share/subscribe"/>
+
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+                <data
+                    android:scheme="https"
+                    android:host="api.smarterlistapp.com"
+                    android:pathPrefix="/api/share/subscribe"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".activity.TutorialActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SmarterList.App.Tutorial">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainNavigationActivity" />
+        </activity>
+
+        <activity android:name=".activity.LoginActivity"
+            android:configChanges="orientation|screenSize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainNavigationActivity" />
+        </activity>
+
+        <activity android:name=".activity.PlanViewPagerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SmarterList.App">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainNavigationActivity" />
+        </activity>
+
+        <activity android:name=".activity.SearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SmarterList.App">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainNavigationActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+
+
+        <activity android:name=".activity.ShoppingNavigationActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SmarterList.App">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainNavigationActivity" />
+        </activity>
+
+
+        <provider
+            android:name=".model.provider.MasterSmartItemProvider"
+            android:authorities="com.twolinessoftware.smarterlist.masterlistitem"
+            android:exported="false" />
+
+        <provider
+            android:name=".model.provider.MasterSmartListProvider"
+            android:authorities="com.twolinessoftware.smarterlist.mastersmartlist"
+            android:exported="false" />
+
+
+        <provider
+            android:name=".model.provider.SmartListProvider"
+            android:authorities="com.twolinessoftware.smarterlist.smartlist"
+            android:exported="false" />
+
+        <provider
+            android:name=".model.provider.SmartItemProvider"
+            android:authorities="com.twolinessoftware.smarterlist.smartlistitem"
+            android:exported="false" />
+
+        <!-- Account Manager -->
+        <service android:name=".service.AccountAuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+
+        <service android:name=".service.sync.ManualSyncService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+
+        <!--  GCM Receivers -->
+        <receiver
+            android:name=".receiver.PushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.twolinessoftware.smarterlist" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <!-- Analytics -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Optionally, register AnalyticsReceiver and AnalyticsService to support background
+             dispatching on non-Google Play devices -->
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

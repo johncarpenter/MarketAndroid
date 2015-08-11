@@ -1,0 +1,99 @@
+<resources>
+
+
+    <!-- Base text formats -->
+    <style name="SmarterList.TextStyle.Body" parent="TextAppearance.AppCompat.Subhead">
+    </style>
+
+    <style name="SmarterList.TextStyle.Caption" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:attr/textColorHighlight</item>
+        <item name="android:layout_marginTop">-2dp</item>
+    </style>
+
+    <style name="SmarterList.TextStyle.Body.Bold" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SmarterList.TextStyle.Title" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SmarterList.TextStyle.HeroTitle" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">@color/pal_grey_4</item>
+    </style>
+
+    <style name="SmarterList.TextStyle.HeroCaption" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/pal_grey_3</item>
+    </style>
+
+
+    <!-- UI Element Styles -->
+    <style name="SmarterList.Toolbar" parent="Theme.AppCompat.NoActionBar" >
+        <item name="android:textColorPrimary">@color/pal_grey_1</item>
+        <item name="android:textColorSecondary">@color/pal_grey_1</item>
+        <item name="colorPrimary">@color/pal_4</item>
+        <item name="colorPrimaryDark">@color/pal_5</item>
+        <item name="actionMenuTextColor">@color/pal_grey_1</item>
+
+        <item name="android:popupBackground">@color/pal_grey_1</item>
+    </style>
+    <!-- Layout and more styles-->
+
+
+    <style name="SmarterList.CaptionBar">
+        <item name="android:textColor">?android:attr/textColorHighlight</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/content_margins</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:background">@color/pal_grey_2</item>
+    </style>
+
+
+    <style name="SmarterList.TitlePageIndicator">
+        <item name="android:textColor">?android:attr/textColorHighlight</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/content_margins</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:background">@color/pal_grey_2</item>
+
+        <item name="footerColor">@color/pal_grey_4</item>
+        <item name="footerLineHeight">1dp</item>
+        <item name="footerIndicatorStyle">underline</item>
+
+        <item name="selectedColor">@color/pal_grey_6</item>
+        <item name="selectedBold">true</item>
+    </style>
+
+    <style name="SmarterList.ButtonFlat" parent="android:Widget.Holo.Button">
+        <item name="android:textColor">?android:attr/textColorHighlight</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/content_margins</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:background">@drawable/button_flat</item>
+    </style>
+
+    <style name="SmarterList.ActionMode" parent="Base.Widget.AppCompat.ActionMode">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:height">?attr/actionBarSize</item>
+
+        <item name="android:textColorPrimary">@color/pal_grey_1</item>
+        <item name="android:textColorSecondary">@color/pal_grey_1</item>
+        <item name="actionMenuTextColor">@color/pal_grey_1</item>
+
+        <item name="android:titleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse</item>
+        <item name="android:subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse</item>
+        <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+
+
+    </style>
+
+</resources>

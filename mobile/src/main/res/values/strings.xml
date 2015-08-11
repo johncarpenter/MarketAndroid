@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Market</string>
+
+    <string name="navigation_drawer_title">Menu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="main_title">Market</string>
+
+    <string name="card_action_shop">Shop</string>
+    <string name="card_action_edit">Plan</string>
+    <string name="create_choose_list">Select A Shopping Template</string>
+    <string name="create_done">Done</string>
+
+    <string name="create_default_name">%1$s</string>
+    <string name="card_delete_action_title">Delete</string>
+    <string name="card_delete_action_description">This will remove the list from your account and all shared accounts</string>
+    <string name="create_name_label">Name</string>
+    <string name="error_communication_generic">Something went wrong..Try again</string>
+    <string name="create_choose_title">Title</string>
+    <string name="create_title">Create New SmartList</string>
+    <string name="create_premium_features">Premium Features</string>
+    <string name="create_add_sharing">Share this list with others</string>
+    <string name="dialog_select_title">Choose Template</string>
+    <string name="search_hint">Search for an item</string>
+
+    <string name="login_title">Sign In</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot">Forgot Password</string>
+    <string name="login_button">Log In</string>
+    <string name="login_register">Sign Up</string>
+
+    <string name="register_title">Sign Up</string>
+    <string name="menu_register">Sign Up</string>
+    <string name="drawer_signup">Sign Up</string>
+    <string name="drawer_account">Account</string>
+    <string name="login_toolbar_title">Log In</string>
+    <string name="register_toolbar_title">Create an Account</string>
+    <string name="menu_login">Sign In</string>
+
+    <string name="register_button">Get Started</string>
+
+    <string name="account_display_name">SmarterList Account</string>
+
+    <string name="error_invalid_userpass">Invalid email or password</string>
+    <string name="error_validation_fields">Email and Password can\'t be empty</string>
+    <string name="error_password_length">Passwords must be at least 6 characters</string>
+    <string name="error_invalid_email">Invalid Email address</string>
+    <string name="error_register_email_taken">That email is in use already</string>
+    <string name="error_register_invalid_email">Not a valid email</string>
+
+
+    <string name="reset_title">Enter your email</string>
+    <string name="reset_toolbar_title">Forgot Password</string>
+    <string name="reset_button">Send Reset Link</string>
+    <string name="reset_link_sent">An email with reset directions has been sent</string>
+    <string name="error_requires_login">You need to be logged in to access this</string>
+    <string name="error_connection_failed">Unable to connect to server</string>
+    <string name="card_date_created">Created %1$s</string>
+    <string name="create_details">My List</string>
+    <string name="create_lists">Use this Smartlist</string>
+    <string name="create_sharing">Share With</string>
+    <string name="create_choose_desc">notes</string>
+    <string name="menu_edit">Edit</string>
+    <string name="error_title">Empty Cart?</string>
+    <string name="error_get_started">Click here to get started</string>
+    <string name="dialog_select_avaiable">Available Templates</string>
+    <string name="dialog_select_title_caption">A template is the master list to help you build your SmartList faster</string>
+    <string name="contacts_search_title">Share with</string>
+    <string name="create_places_notification">Remind me when I am near</string>
+    <string name="create_choose_destination">Select location</string>
+    <string name="menu_delete">Delete</string>
+    <string name="tutorial_skip">Skip</string>
+    <string name="tutorial_nextdone">Next</string>
+    <string name="tutorial_signup">Sign Up</string>
+    <string name="register_why_signup">Why Signup</string>
+    <string name="register_skip">Skip for now</string>
+
+    <string name="hero_title1">Market by SmarterList</string>
+    <string name="hero_caption1">Meet Market. The easiest tool to create and manage your grocery lists.</string>
+    <string name="hero_title2">Simple</string>
+    <string name="hero_caption2">Markets simple interface lets you pick from the most common grocery items and avoid typing the same items week after week</string>
+    <string name="hero_title3">Smart</string>
+    <string name="hero_caption3">Market learns your frequent shopping items and makes it easy to add them to your list</string>
+    <string name="hero_title4">Easy</string>
+    <string name="hero_caption4">No more complicated sharing. Click share and tap phones together instantly synchronizes lists.</string>
+    <string name="master_add">Name</string>
+    <string name="master_add_title">Add a new item</string>
+    <string name="master_add_cancel">Cancel</string>
+    <string name="master_add_submit">Add</string>
+    <string name="search_no_results">No Luck?</string>
+    <string name="search_no_results_caption">Click here to add to your list</string>
+    <string name="master_add_title_caption">Adding an item to the list will make it available for future lists also</string>
+    <string name="master_add_details">New item details</string>
+    <string name="menu_done">Done</string>
+    <string name="search_add">ADD</string>
+    <string name="menu_show_category">Show as Categories</string>
+    <string name="menu_show_list">Show as List</string>
+    <string name="default_smartlist_name">QuickList</string>
+    <string name="default_smartlist_desc">Get started with your first list</string>
+    <string name="shop_pager_title">My List</string>
+    <string name="categories_pager_title">Categories</string>
+    <string name="allitems_pager_title">All Items</string>
+    <string name="master_add_category">Choose category</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_leave">Remove Sharing</string>
+    <string name="search_results">Search Results</string>
+    <string name="predicted_pager_title">Favorites</string>
+    <string name="error_cannot_create_item">We are unable to create the item at this time</string>
+    <string name="notes_title">Add a note to this line item</string>
+    <string name="notes_hint">Notes</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">Add</string>
+    <string name="dialog_delete">Delete</string>
+    <string name="dialog_generate_token">Generating Token</string>
+    <string name="dialog_saving_item">Adding Item to Master List</string>
+    <string name="error_authentication">Unable to access account</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_about">About</string>
+    <string name="register_why_signup_text">Registering with Market is free and easy. We never sell your information and only contact you on your request.</string>
+    <string name="register_why_signup_button">Got it</string>
+    <string name="share_subject">Sharing Shopping List</string>
+    <string name="email_subject">Market Feedback</string>
+    <string name="email_send_text">Send feedback using..</string>
+    <string name="drawer_lists">Shopping Lists</string>
+    <string name="drawer_menu">Menu</string>
+    <string name="dialog_logout_title">Logout?</string>
+    <string name="dialog_logout_text">Do you want to sign out of your account?</string>
+    <string name="dialog_logout">logout</string>
+    <string name="dialog_about_title">About</string>
+    <string name="dialog_about_text"><![CDATA[<p>Market By 2Lines Software<p>http://www.2linessoftware.com<p>Version %1$s</p><p>© 2015 2Lines Software</p><p>All rights reserved. Not liable for and damage incurred through the use of this software. Eat real food and just a little]]></string>
+    <string name="dialog_close">close</string>
+    <string name="error_invalid_share_token">That share token is no longer valid or has been used.</string>
+
+    <plurals name="create_shared_with">
+        <item quantity="zero">Shared with no one</item>
+        <item quantity="one">Shared with %d person</item>
+        <item quantity= "other">Shared with %d people</item>
+    </plurals>
+
+    <plurals name="card_caption_items">
+        <item quantity="zero">empty</item>
+        <item quantity="other">%d items in the list</item>
+    </plurals>
+</resources>

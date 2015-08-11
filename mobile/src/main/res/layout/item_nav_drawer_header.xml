@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015. 2Lines Software,Inc
+  ~
+  ~   Licensed under the Apache License, Version 2.0 (the "License");
+  ~   you may not use this file except in compliance with the License.
+  ~   You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~   Unless required by applicable law or agreed to in writing, software
+  ~   distributed under the License is distributed on an "AS IS" BASIS,
+  ~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~   See the License for the specific language governing permissions and
+  ~   limitations under the License.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="@dimen/navigation_drawer_header_height"
+        android:background="@drawable/nav_header"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_check_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/content_margins_half"
+            android:src="@drawable/nav_logo" />
+
+        <TextView
+            android:id="@+id/text_nav_email"
+            style="@style/SmarterList.TextStyle.Body.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/content_margins"
+            android:layout_marginLeft="@dimen/content_margins"
+            android:layout_marginTop="@dimen/content_margins_half"
+            android:drawableRight="@drawable/ic_action_cancel"
+            android:gravity="center_vertical"
+            android:text="logged in as"
+            android:textColor="@color/pal_grey_1" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/SmarterList.CaptionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:text="@string/drawer_lists" />
+
+    <fragment
+        android:id="@+id/drawer_shoppinglist"
+        android:name="com.twolinessoftware.smarterlist.fragment.SmartListRecyclerViewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_drawer_shop_header_height"
+        android:layout_gravity="start" />
+
+    <TextView
+        style="@style/SmarterList.CaptionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:text="@string/drawer_menu" />
+</LinearLayout>
