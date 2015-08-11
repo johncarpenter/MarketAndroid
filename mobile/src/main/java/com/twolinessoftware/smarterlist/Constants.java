@@ -51,7 +51,7 @@ public class Constants {
     //public static final String API_ENDPOINT = "http://192.168.1.47:8080/api";
     public static final String API_ENDPOINT = "https://api.smarterlistapp.com/api";
 
-    public static String ANDROID_CLIENT_ID ="1KCE6YTF3BYUQ9L8CBNY4KT8Q";
+    public static String ANDROID_CLIENT_ID ="REMOVED";
     public static String ANDROID_CLIENT_SECRET ="NOTREQUIRED";
     public static final String USER_DATA_AUTH_TOKEN_EXPIRY = "USER_DATA_AUTH_EXPIRY";
 
